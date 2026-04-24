@@ -688,32 +688,24 @@
           <h2 class="section-title">Meet Our Team</h2>
         </div>
         <div class="team-grid">
-          <div class="team-card fade-up">
-            <div class="team-img">👨‍💼</div>
-            <div class="team-info">
-              <h4>Ashutosh Jangid</h4>
-              <div class="role">Founder & Director</div>
-              <p>With over 10 years in the furniture industry, Ashutosh leads every project with passion, precision, and a deep understanding of client needs.</p>
+            <div class="team-card fade-up">
+              <div class="team-img" style="background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">👨‍💼</div>
+              <div class="team-info">
+                <h4>Ashutosh Jangid</h4>
+                <div class="role" style="color: var(--orange); font-weight: 600; margin-bottom: 0.5rem;">Founder & Director</div>
+                <p>Founded the studio in 2014 with 10+ years of experience. Ashutosh leads every project with precision and deep client understanding.</p>
+              </div>
+            </div>
+
+            <div class="team-card fade-up">
+              <div class="team-img" style="background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">👨‍💻</div>
+              <div class="team-info">
+                <h4>Shlok Pandya</h4>
+                <div class="role" style="color: var(--orange); font-weight: 600; margin-bottom: 0.5rem;">Digital & Brand Partner</div>
+                <p>Handles the studio's complete digital presence — website, branding, and online strategy — bringing Jangid Furniture Studio's craftsmanship to the digital world.</p>
+              </div>
             </div>
           </div>
-          <div class="team-card fade-up">
-            <div class="team-img">👨‍🎨</div>
-            <div class="team-info">
-              <h4>Deepak Sharma</h4>
-              <div class="role">Lead Interior Designer</div>
-              <p>Deepak brings spaces to life with thoughtful design, balancing aesthetics and functionality to create interiors that truly resonate.</p>
-            </div>
-          </div>
-          <div class="team-card fade-up">
-            <div class="team-img">👷</div>
-            <div class="team-info">
-              <h4>Mahesh Patel</h4>
-              <div class="role">Site Manager</div>
-              <p>Mahesh oversees every installation on-site, ensuring quality standards are upheld and every detail is executed exactly as planned.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   </div>
 </div>
@@ -1191,20 +1183,20 @@ async function supabase(method, table, body = null, filter = '') {
 
 // ===================== GALLERY DATA (Supabase + fallback) =====================
 const galleryFallback = [
-  { src:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80', title:'Modern L-Shape Kitchen – Satellite, Ahmedabad', cat:'kitchen', catLabel:'Modular Kitchen' },
-  { src:'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80', title:'Contemporary White Kitchen – Bopal', cat:'kitchen', catLabel:'Modular Kitchen' },
-  { src:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80', title:'Full-Height Sliding Wardrobe – Bodakdev', cat:'wardrobe', catLabel:'Wardrobes' },
-  { src:'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80', title:'Walk-in Closet Setup – SG Highway Villa', cat:'wardrobe', catLabel:'Wardrobes' },
-  { src:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80', title:'Open-Plan Office Glass Cabin – Prahladnagar', cat:'glass', catLabel:'Glass Partitions' },
-  { src:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80', title:'Corporate Office Workstations – Navrangpura', cat:'office', catLabel:'Office Furniture' },
-  { src:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80', title:'Premium Living Room Setup – Thaltej', cat:'living', catLabel:'Living Room' },
-  { src:'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80', title:'Minimalist Bedroom Interior – Gota', cat:'living', catLabel:'Living Room' },
-  { src:'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=600&q=80', title:'Parallel Modular Kitchen – Chandkheda', cat:'kitchen', catLabel:'Modular Kitchen' },
-  { src:'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80', title:'Reception Counter Design – Vastrapur Clinic', cat:'office', catLabel:'Office Furniture' },
-  { src:'https://images.unsplash.com/photo-1562184647-8ce78a3c5a0e?w=600&q=80', title:'Swing Door Wardrobe with Loft – Maninagar', cat:'wardrobe', catLabel:'Wardrobes' },
-  { src:'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80', title:'Glass Partition & Cabin Work – Iscon', cat:'glass', catLabel:'Glass Partitions' },
-];
-
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipMPSkONnhzVRpX1Is91s8mbg_F6GlWKJLuuC8LH=w223-h160-n-k-no-nu', title: 'Modern Kitchen', cat: 'kitchen', catLabel: 'Kitchen' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipNHpec1_1ad-xBY7lvfg68cGKcK4rugkpTsJI_9=w243-h406-n-k-no-nu', title: 'Premium Wardrobe', cat: 'wardrobe', catLabel: 'Wardrobe' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipP0vT28fvPowCBDr1qgjOeXLR9x363nO3HPv2ez=w243-h174-n-k-no-nu', title: 'Glass Partition', cat: 'glass', catLabel: 'Glass' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipOsPmeMamMQhsxeD3XymUPpTnAhvKKJW3kBu1YK=w243-h174-n-k-no-nu', title: 'Office Setup', cat: 'office', catLabel: 'Office' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipNlib3o1DioHkfLhOqEQjLnICiEsGOgRcXE5Yxx=w243-h203-n-k-no-nu', title: 'Custom Cabinet', cat: 'kitchen', catLabel: 'Kitchen' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipO7VCH0piqXoGV280qMhXjdS5m-C_2OaqVS3hoM=w243-h304-n-k-no-nu', title: 'Luxury Storage', cat: 'wardrobe', catLabel: 'Wardrobe' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipMh5CtZ5xE9loh4wmmFQybv8R6_Mbnm_C6YMf7d=w243-h244-n-k-no-nu', title: 'Commercial Glass', cat: 'glass', catLabel: 'Glass' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipOBB6Py04F22ttP2IT_4l3nlUmAxOQ81_FKbZsZ=w243-h203-n-k-no-nu', title: 'Executive Desk', cat: 'office', catLabel: 'Office' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipPLdNuXqkVUyAbzC9Enf2vFCerd0TdeN70L2s_h=w243-h406-n-k-no-nu', title: 'Modular Island', cat: 'kitchen', catLabel: 'Kitchen' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipOpKx5Lh3Bc71T4rVpCLOaIBzej4rZsLFWpR0aq=w243-h406-n-k-no-nu', title: 'Master Wardrobe', cat: 'wardrobe', catLabel: 'Wardrobe' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipNA03Q5Xj7YYHzehE9DxzMzgTZBrJxuOxu5nI4w=w243-h174-n-k-no-nu', title: 'Studio Partition', cat: 'glass', catLabel: 'Glass' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipP-YTyV_BO3mULpOD1FxAF5Nzn0bxj2rfjmPHDm=w243-h406-n-k-no-nu', title: 'Workstation', cat: 'office', catLabel: 'Office' },
+      { src: 'https://lh3.googleusercontent.com/p/AF1QipO8DfaEDh7kE6zxO4JBuUw36I9r6V5XfUIIWcdL=w243-h174-n-k-no-nu', title: 'Kitchen Detail', cat: 'kitchen', catLabel: 'Kitchen' }
+    ];
 let galleryData = [...galleryFallback];
 let currentFilter = 'all';
 let lightboxIndex = 0;
@@ -1497,8 +1489,12 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 // ===================== CONTACT FORM =====================
 function submitForm(type) {
   const formId = type === 'visit' ? 'tab-visit' : 'tab-quote';
+  const formName = type === 'visit' ? 'site-visit' : 'quote-request';
   const form = document.getElementById(formId);
+  
+  // Create the data object for Netlify
   const formData = new FormData(form);
+  formData.append("form-name", formName);
 
   fetch("/", {
     method: "POST",
@@ -1506,10 +1502,13 @@ function submitForm(type) {
     body: new URLSearchParams(formData).toString(),
   })
   .then(() => {
-    showPremiumPopup();
+    showPremiumPopup(); // Keep your fancy popup vibe
     form.reset();
   })
-  .catch((error) => alert("Submission failed: " + error));
+  .catch((error) => {
+    console.error('Form Submission Error:', error);
+    alert("Submission failed. Please check your connection.");
+  });
 }
 
 function showPremiumPopup() {
