@@ -705,7 +705,7 @@
                 <p>Handles the studio's complete digital presence — website, branding, and online strategy — bringing Jangid Furniture Studio's craftsmanship to the digital world.</p>
               </div>
             </div>
-          </div>
+          </div>      </div>
     </section>
   </div>
 </div>
@@ -1161,9 +1161,10 @@
 <script>
 // ===================== SUPABASE CONFIG =====================
 // 🔴 REPLACE THESE WITH YOUR ACTUAL SUPABASE CREDENTIALS
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
-const ADMIN_PASSWORD = 'jangid@admin2024'; // Change this!
+const SUPABASE_URL = 'https://lajyvrhlyrgvyahuoghv.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_be-rQs36kZ1pMR3tKB-1LA_M4jR-Eb7';
+const ADMIN_PASSWORD = 'jangid@admin2024';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojrlybg';
 
 async function supabase(method, table, body = null, filter = '') {
   const url = `${SUPABASE_URL}/rest/v1/${table}${filter}`;
@@ -1487,28 +1488,69 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 // ===================== CONTACT FORM =====================
-function submitForm(type) {
-  const formId = type === 'visit' ? 'tab-visit' : 'tab-quote';
-  const formName = type === 'visit' ? 'site-visit' : 'quote-request';
-  const form = document.getElementById(formId);
-  
-  // Create the data object for Netlify
-  const formData = new FormData(form);
-  formData.append("form-name", formName);
+async function handleFormSubmit(type) {
+  const nameEl = document.getElementById(type === 'visit' ? 'v-name' : 'q-name');
+  const phoneEl = document.getElementById(type === 'visit' ? 'v-phone' : 'q-phone');
+  const reqEl = type === 'quote' ? document.getElementById('q-service') : null;
+  const detailsEl = type === 'quote' ? document.getElementById('q-details') : null;
+  if (!nameEl.value.trim()) { nameEl.focus(); nameEl.style.borderColor='#e74c3c'; setTimeout(()=>nameEl.style.borderColor='',2000); return; }
+  const phone = phoneEl.value.replace(/\s/g,'');
+  if (!phone || !/^[+\d]{10,13}$/.test(phone)) { phoneEl.focus(); phoneEl.style.borderColor='#e74c3c'; setTimeout(()=>phoneEl.style.borderColor='',2000); return; }
+  if (reqEl && !reqEl.value) { reqEl.focus(); reqEl.style.borderColor='#e74c3c'; setTimeout(()=>reqEl.style.borderColor='',2000); return; }
+  if (detailsEl && !detailsEl.value.trim()) { detailsEl.focus(); detailsEl.style.borderColor='#e74c3c'; setTimeout(()=>detailsEl.style.borderColor='',2000); return; }
 
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-  .then(() => {
-    showPremiumPopup(); // Keep your fancy popup vibe
-    form.reset();
-  })
-  .catch((error) => {
-    console.error('Form Submission Error:', error);
-    alert("Submission failed. Please check your connection.");
-  });
+  const payload = new FormData();
+  payload.append('form_type', type);
+  payload.append('name', nameEl.value.trim());
+  payload.append('phone', phone);
+
+  if (type === 'visit') {
+    const cityEl = document.getElementById('v-city');
+    const dateEl = document.getElementById('v-date');
+    const msgEl = document.getElementById('v-msg');
+    payload.append('city', cityEl?.value?.trim() || '');
+    payload.append('preferred_date', dateEl?.value || '');
+    payload.append('message', msgEl?.value?.trim() || '');
+  } else {
+    const emailEl = document.getElementById('q-email');
+    const budgetEl = document.getElementById('q-budget');
+    payload.append('email', emailEl?.value?.trim() || '');
+    payload.append('service', reqEl?.value || '');
+    payload.append('budget', budgetEl?.value || '');
+    payload.append('details', detailsEl?.value?.trim() || '');
+  }
+
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: payload,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) throw new Error('Form submission failed');
+
+    showToast("✓ Received! We'll contact you within 24 hours.");
+
+    if (type === 'visit') {
+      document.getElementById('v-name').value = '';
+      document.getElementById('v-phone').value = '';
+      document.getElementById('v-city').value = '';
+      document.getElementById('v-date').value = '';
+      document.getElementById('v-msg').value = '';
+    } else {
+      document.getElementById('q-name').value = '';
+      document.getElementById('q-phone').value = '';
+      document.getElementById('q-email').value = '';
+      document.getElementById('q-service').value = '';
+      document.getElementById('q-budget').value = '';
+      document.getElementById('q-details').value = '';
+    }
+  } catch (e) {
+    showToast("⚠️ Could not submit. Please try again.");
+  }
+}
+
+function submitForm(type) {
+  handleFormSubmit(type);
 }
 
 function showPremiumPopup() {
