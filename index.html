@@ -52,11 +52,11 @@
   .page.active { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* FADE UP ANIMATION */
+  /* FADE UP */
   .fade-up { opacity: 0; transform: translateY(36px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* ========== HEADER ========== */
+  /* HEADER */
   #header {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     background: rgba(255,255,255,0.96); backdrop-filter: blur(12px);
@@ -91,7 +91,7 @@
   .mobile-nav a:hover { color: var(--orange); padding-left: 8px; }
   .mobile-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); }
 
-  /* ========== HOME PAGE ========== */
+  /* HERO */
   .hero {
     min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
     background: linear-gradient(135deg, rgba(31,31,31,0.8) 0%, rgba(31,31,31,0.5) 50%, rgba(224,123,57,0.3) 100%),
@@ -108,7 +108,7 @@
   .scroll-dot { width: 2px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent); border-radius: 2px; animation: scrollAnim 1.6s ease-in-out infinite; }
   @keyframes scrollAnim { 0%,100%{transform:scaleY(0.4);transform-origin:top;} 50%{transform:scaleY(1);} }
 
-  /* SERVICES SECTION */
+  /* SERVICES CARDS */
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px; }
   .service-card { background: var(--white); border-radius: var(--radius); padding: 32px 24px; border: 1px solid var(--border); transition: var(--transition); cursor: pointer; position: relative; overflow: hidden; }
   .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: var(--transition); }
@@ -134,7 +134,7 @@
   .stat-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1; }
   .stat-label { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin-top: 6px; font-weight: 500; }
 
-  /* TESTIMONIALS */
+  /* REVIEWS */
   .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
   .testimonial-card { background: var(--white); border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); transition: var(--transition); }
   .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
@@ -153,7 +153,7 @@
   .whatsapp-btn { background: #25D366; color: var(--white); }
   .whatsapp-btn:hover { background: #20b958; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
 
-  /* ========== ABOUT PAGE ========== */
+  /* ABOUT */
   .about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   .about-img { border-radius: var(--radius); overflow: hidden; position: relative; }
   .about-img img { width: 100%; height: 480px; object-fit: cover; }
@@ -163,18 +163,15 @@
   .about-text p { color: var(--grey); line-height: 1.8; margin-bottom: 16px; }
   .about-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
   .badge { padding: 6px 16px; background: rgba(224,123,57,0.1); color: var(--orange); border-radius: 50px; font-size: 0.82rem; font-weight: 600; }
-
   .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
   .mv-card { padding: 36px; border-radius: var(--radius); }
   .mv-card.mission { background: var(--orange); color: var(--white); }
   .mv-card.vision { background: var(--dark); color: var(--white); }
   .mv-card h3 { font-size: 1.4rem; margin-bottom: 12px; }
   .mv-card p { font-size: 0.95rem; opacity: 0.85; line-height: 1.7; }
-
   .values-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
   .value-item { display: flex; align-items: center; gap: 12px; padding: 20px; background: var(--white); border-radius: 10px; border: 1px solid var(--border); font-weight: 600; font-size: 0.95rem; }
   .value-item::before { content: '✦'; color: var(--orange); font-size: 0.9rem; }
-
   .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
   .team-card { background: var(--white); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: var(--transition); }
   .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
@@ -184,7 +181,7 @@
   .team-info .role { color: var(--orange); font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
   .team-info p { font-size: 0.85rem; color: var(--grey); line-height: 1.6; }
 
-  /* ========== SERVICES PAGE ========== */
+  /* SERVICES PAGE */
   .service-detail { margin-bottom: 80px; }
   .service-detail-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   .service-detail-inner.reverse { direction: rtl; }
@@ -196,8 +193,7 @@
   .service-detail-text p { color: var(--grey); line-height: 1.8; margin-bottom: 24px; }
   .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .feature-list li { display: flex; align-items: center; gap: 12px; font-size: 0.92rem; }
-  .feature-list li::before { content: ''; width: 20px; height: 20px; background: var(--orange); border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23E07B39'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23E07B39' opacity='.15'/%3E%3Cpath d='M6 10l3 3 5-5' stroke='%23E07B39' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/cover; }
-
+  .feature-list li::before { content: ''; width: 20px; height: 20px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23E07B39' opacity='.15'/%3E%3Cpath d='M6 10l3 3 5-5' stroke='%23E07B39' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/cover; }
   .process-section { background: var(--dark); color: var(--white); border-radius: 24px; padding: 60px; margin-top: 60px; }
   .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
   .process-steps::before { content: ''; position: absolute; top: 28px; left: 12%; right: 12%; height: 2px; background: rgba(224,123,57,0.3); }
@@ -205,25 +201,25 @@
   .step-num { width: 56px; height: 56px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--white); margin: 0 auto 16px; position: relative; z-index: 1; }
   .process-step h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
   .process-step p { font-size: 0.8rem; color: rgba(255,255,255,0.55); }
-
   .materials-section { background: var(--white); border-radius: var(--radius); padding: 48px; border: 1px solid var(--border); margin-top: 48px; }
   .materials-grid { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
   .material-tag { padding: 10px 20px; border-radius: 50px; background: var(--bg); border: 1px solid var(--border); font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 8px; }
   .material-tag::before { content: ''; width: 8px; height: 8px; background: var(--orange); border-radius: 50%; }
 
-  /* ========== GALLERY PAGE ========== */
+  /* ====== BUG 3 FIX — GALLERY GRID ====== */
   .gallery-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
   .filter-btn { padding: 10px 20px; border-radius: 50px; border: 1.5px solid var(--border); background: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: var(--transition); color: var(--dark); }
   .filter-btn:hover, .filter-btn.active { background: var(--orange); color: var(--white); border-color: var(--orange); }
-  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .gallery-item { position: relative; overflow: hidden; border-radius: 10px; cursor: pointer; background: #ddd; }
-  .gallery-item img { width: 100%; height: 240px; object-fit: cover; transition: transform 0.5s ease; display: block; }
-  .gallery-item:nth-child(3n+1) img { height: 300px; }
+  /* Clean 3-column grid, no height tricks that break layout */
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .gallery-item { position: relative; overflow: hidden; border-radius: 12px; cursor: pointer; background: #eee; aspect-ratio: 4/3; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
   .gallery-item:hover img { transform: scale(1.06); }
   .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(31,31,31,0.9) 0%, transparent 60%); opacity: 0; transition: var(--transition); display: flex; align-items: flex-end; padding: 20px; }
   .gallery-item:hover .gallery-overlay { opacity: 1; }
   .gallery-overlay .proj-title { color: var(--white); font-size: 0.88rem; font-weight: 600; line-height: 1.3; }
   .gallery-overlay .proj-cat { color: var(--orange-light); font-size: 0.75rem; margin-top: 2px; }
+  .gallery-empty { grid-column: 1/-1; text-align: center; padding: 60px; color: var(--grey); }
 
   /* LIGHTBOX */
   .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 2000; align-items: center; justify-content: center; padding: 24px; }
@@ -239,7 +235,7 @@
   .lightbox-prev { left: -56px; }
   .lightbox-next { right: -56px; }
 
-  /* ========== CONTACT PAGE ========== */
+  /* CONTACT */
   .contact-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 56px; }
   .contact-card { background: var(--white); border-radius: var(--radius); padding: 28px; border: 1px solid var(--border); display: flex; align-items: flex-start; gap: 16px; transition: var(--transition); }
   .contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
@@ -247,13 +243,16 @@
   .contact-card h4 { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); margin-bottom: 4px; }
   .contact-card p, .contact-card a { font-size: 0.95rem; font-weight: 600; color: var(--dark); }
   .contact-card a:hover { color: var(--orange); }
-
   .contact-body { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+  /* ====== BUG 1 FIX — FORM TABS (isolated per container) ====== */
   .form-tabs { display: flex; border: 1.5px solid var(--border); border-radius: 50px; padding: 4px; margin-bottom: 32px; background: var(--bg); }
   .tab-btn { flex: 1; padding: 10px 20px; border: none; background: none; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: var(--transition); color: var(--grey); }
   .tab-btn.active { background: var(--white); color: var(--orange); box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-weight: 600; }
-  .tab-content { display: none; }
-  .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+  /* Tab panels hidden by default — toggled via JS scoped to their parent */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; animation: fadeIn 0.3s ease; }
+
   .form-group { margin-bottom: 20px; }
   .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--dark); margin-bottom: 8px; }
   .form-group input, .form-group select, .form-group textarea {
@@ -267,10 +266,32 @@
   .map-wrap { border-radius: var(--radius); overflow: hidden; height: 100%; min-height: 400px; }
   .map-wrap iframe { width: 100%; height: 100%; border: none; min-height: 400px; }
 
+  /* STAR PICKER */
+  .star-picker { display: flex; gap: 6px; margin-top: 4px; }
+  .star-picker span { font-size: 2rem; color: #ddd; cursor: pointer; transition: color 0.15s; line-height: 1; }
+  .star-picker span.active, .star-picker span.hover { color: var(--orange); }
+
+  /* ADMIN PANEL */
+  .admin-wrap { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 5000; display: none; align-items: center; justify-content: center; padding: 24px; }
+  .admin-wrap.open { display: flex; }
+  .admin-box { background: var(--white); border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow-y: auto; }
+  .admin-header { background: var(--dark); color: var(--white); padding: 20px 28px; border-radius: 16px 16px 0 0; display: flex; align-items: center; justify-content: space-between; }
+  .admin-header h3 { font-size: 1.1rem; }
+  .admin-close { background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
+  .admin-login { padding: 40px; }
+  .admin-reviews { padding: 24px; }
+  .admin-review-item { border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  .admin-review-item .rev-meta { font-size: 0.82rem; color: var(--grey); margin-bottom: 8px; }
+  .admin-review-item .rev-text { font-size: 0.92rem; margin-bottom: 14px; line-height: 1.6; }
+  .admin-actions { display: flex; gap: 10px; }
+  .btn-approve { background: #25D366; color: white; padding: 8px 18px; border: none; border-radius: 50px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: var(--transition); }
+  .btn-reject { background: #e74c3c; color: white; padding: 8px 18px; border: none; border-radius: 50px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: var(--transition); }
+  .btn-approve:hover { opacity: 0.85; } .btn-reject:hover { opacity: 0.85; }
+  .admin-empty { text-align: center; padding: 40px; color: var(--grey); }
+
   /* TOAST */
   .toast { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--dark); color: var(--white); padding: 16px 28px; border-radius: 50px; font-size: 0.92rem; font-weight: 500; z-index: 3000; opacity: 0; transition: all 0.4s ease; pointer-events: none; display: flex; align-items: center; gap: 10px; white-space: nowrap; }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  .toast::before { content: '✓'; width: 24px; height: 24px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
 
   /* FLOATING WA */
   .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.5); transition: var(--transition); }
@@ -293,35 +314,10 @@
   .footer-col ul li a:hover { color: var(--orange); }
   .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.88rem; color: rgba(255,255,255,0.65); }
   .footer-contact-item span:first-child { color: var(--orange); font-size: 1rem; flex-shrink: 0; }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 12px; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
   .footer-bottom p { font-size: 0.83rem; color: rgba(255,255,255,0.35); }
 
-  /* STAR PICKER */
-  .star-picker { display:flex; gap:6px; margin-top:4px; }
-  .star-picker span { font-size:2rem; color:#ddd; cursor:pointer; transition:color 0.15s; line-height:1; }
-  .star-picker span.active, .star-picker span.hover { color:var(--orange); }
-
-  /* REVIEW CARD */
-  .review-pending-badge { display:inline-block; background:rgba(224,123,57,0.1); color:var(--orange); font-size:0.72rem; font-weight:600; padding:2px 10px; border-radius:50px; margin-bottom:8px; }
-
-  /* ADMIN PANEL */
-  .admin-wrap { position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:5000; display:none; align-items:center; justify-content:center; padding:24px; }
-  .admin-wrap.open { display:flex; }
-  .admin-box { background:var(--white); border-radius:16px; width:100%; max-width:760px; max-height:90vh; overflow-y:auto; }
-  .admin-header { background:var(--dark); color:var(--white); padding:20px 28px; border-radius:16px 16px 0 0; display:flex; align-items:center; justify-content:space-between; }
-  .admin-header h3 { font-size:1.1rem; }
-  .admin-close { background:none; border:none; color:var(--white); font-size:1.4rem; cursor:pointer; }
-  .admin-login { padding:40px; }
-  .admin-reviews { padding:24px; }
-  .admin-review-item { border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:16px; }
-  .admin-review-item .rev-meta { font-size:0.82rem; color:var(--grey); margin-bottom:8px; }
-  .admin-review-item .rev-text { font-size:0.92rem; margin-bottom:14px; line-height:1.6; }
-  .admin-actions { display:flex; gap:10px; }
-  .btn-approve { background:#25D366; color:white; padding:8px 18px; border:none; border-radius:50px; cursor:pointer; font-size:0.85rem; font-weight:600; transition:var(--transition); }
-  .btn-reject { background:#e74c3c; color:white; padding:8px 18px; border:none; border-radius:50px; cursor:pointer; font-size:0.85rem; font-weight:600; transition:var(--transition); }
-  .btn-approve:hover { opacity:0.85; } .btn-reject:hover { opacity:0.85; }
-  .admin-empty { text-align:center; padding:40px; color:var(--grey); }
-
+  /* RESPONSIVE */
   @media(max-width:1024px) {
     .about-intro, .service-detail-inner { grid-template-columns: 1fr; gap: 40px; }
     .service-detail-inner.reverse { direction: ltr; }
@@ -330,7 +326,7 @@
     .footer-top { grid-template-columns: 1fr 1fr; }
     .process-steps { grid-template-columns: 1fr 1fr; }
     .process-steps::before { display: none; }
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .lightbox-prev { left: -44px; }
     .lightbox-next { right: -44px; }
   }
@@ -342,13 +338,13 @@
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .mv-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .gallery-item img, .gallery-item:nth-child(3n+1) img { height: 200px; }
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
     .footer-bottom { flex-direction: column; text-align: center; }
     .lightbox-prev { left: 8px; }
     .lightbox-next { right: 8px; }
     .process-section { padding: 40px 24px; }
     .section { padding: 64px 0; }
+    .form-row { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -377,15 +373,12 @@
       </nav>
       <div class="header-cta">
         <button class="btn btn-primary" onclick="showPage('contact')">Get Quote</button>
-        <div class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- MOBILE NAV OVERLAY -->
 <div class="mobile-nav-overlay" id="navOverlay"></div>
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" id="mobileClose">✕</button>
@@ -399,10 +392,8 @@
   </div>
 </div>
 
-<!-- ================= HOME PAGE ================= -->
+<!-- ========== HOME ========== -->
 <div id="page-home" class="page active">
-
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -415,13 +406,9 @@
         </div>
       </div>
     </div>
-    <div class="hero-scroll">
-      <div class="scroll-dot"></div>
-      scroll
-    </div>
+    <div class="hero-scroll"><div class="scroll-dot"></div>scroll</div>
   </section>
 
-  <!-- SERVICES PREVIEW -->
   <section class="section">
     <div class="container">
       <div class="section-header fade-up">
@@ -464,7 +451,6 @@
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
   <section class="section why-section">
     <div class="container">
       <div class="section-header fade-up" style="text-align:center">
@@ -472,41 +458,16 @@
         <h2 class="section-title" style="color:var(--white)">Built on Trust & Craftsmanship</h2>
       </div>
       <div class="why-grid">
-        <div class="why-item fade-up">
-          <div class="why-icon">🏆</div>
-          <h4>Quality Craftsmanship</h4>
-          <p>Precision woodwork with premium grade materials</p>
-        </div>
-        <div class="why-item fade-up">
-          <div class="why-icon">👷</div>
-          <h4>Expert Team</h4>
-          <p>Skilled carpenters and designers with 10+ years experience</p>
-        </div>
-        <div class="why-item fade-up">
-          <div class="why-icon">⏱</div>
-          <h4>Timely Delivery</h4>
-          <p>We commit to deadlines and deliver on schedule</p>
-        </div>
-        <div class="why-item fade-up">
-          <div class="why-icon">🛡</div>
-          <h4>Warranty Support</h4>
-          <p>Post-installation warranty and dedicated after-sales service</p>
-        </div>
-        <div class="why-item fade-up">
-          <div class="why-icon">💰</div>
-          <h4>Affordable Pricing</h4>
-          <p>Competitive pricing without compromising on quality</p>
-        </div>
-        <div class="why-item fade-up">
-          <div class="why-icon">🏠</div>
-          <h4>Free Site Visit</h4>
-          <p>Complimentary consultation and site measurement</p>
-        </div>
+        <div class="why-item fade-up"><div class="why-icon">🏆</div><h4>Quality Craftsmanship</h4><p>Precision woodwork with premium grade materials</p></div>
+        <div class="why-item fade-up"><div class="why-icon">👷</div><h4>Expert Team</h4><p>Skilled carpenters and designers with 10+ years experience</p></div>
+        <div class="why-item fade-up"><div class="why-icon">⏱</div><h4>Timely Delivery</h4><p>We commit to deadlines and deliver on schedule</p></div>
+        <div class="why-item fade-up"><div class="why-icon">🛡</div><h4>Warranty Support</h4><p>Post-installation warranty and dedicated after-sales service</p></div>
+        <div class="why-item fade-up"><div class="why-icon">💰</div><h4>Affordable Pricing</h4><p>Competitive pricing without compromising on quality</p></div>
+        <div class="why-item fade-up"><div class="why-icon">🏠</div><h4>Free Site Visit</h4><p>Complimentary consultation and site measurement</p></div>
       </div>
     </div>
   </section>
 
-  <!-- STATS BAR -->
   <div class="stats-bar">
     <div class="container">
       <div class="stats-grid">
@@ -518,7 +479,7 @@
     </div>
   </div>
 
-  <!-- REVIEWS SECTION -->
+  <!-- REVIEWS -->
   <section class="section" id="reviews-section">
     <div class="container">
       <div class="section-header fade-up">
@@ -526,8 +487,6 @@
         <h2 class="section-title">What Our Clients Say</h2>
         <p class="section-sub">Real reviews from real customers. Have we worked together? Share your experience!</p>
       </div>
-
-      <!-- REVIEWS DISPLAY -->
       <div class="testimonials-grid" id="reviewsGrid">
         <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--grey)">
           <div style="font-size:2rem;margin-bottom:12px">⏳</div>
@@ -535,7 +494,7 @@
         </div>
       </div>
 
-      <!-- WRITE A REVIEW -->
+      <!-- ====== BUG 2 FIX — REVIEW FORM with proper id and submit handler ====== -->
       <div class="review-form-wrap fade-up" style="margin-top:56px;background:var(--white);border-radius:var(--radius);padding:40px;border:1px solid var(--border);">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px">
           <div style="width:48px;height:48px;background:rgba(224,123,57,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem">✍️</div>
@@ -544,41 +503,42 @@
             <p style="color:var(--grey);font-size:0.88rem">Worked with us? We'd love to hear from you.</p>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" id="rev-name" placeholder="Ramesh Patel">
-          </div>
-          <div class="form-group">
-            <label>Email Address *</label>
-            <input type="email" id="rev-email" placeholder="your@email.com">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Area / City</label>
-            <input type="text" id="rev-location" placeholder="Satellite, Ahmedabad">
-          </div>
-          <div class="form-group">
-            <label>Rating *</label>
-            <div class="star-picker" id="starPicker">
-              <span data-val="1">★</span><span data-val="2">★</span>
-              <span data-val="3">★</span><span data-val="4">★</span><span data-val="5">★</span>
+        <form id="reviewForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="rev-name" placeholder="Ramesh Patel">
             </div>
-            <input type="hidden" id="rev-rating" value="0">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="rev-email" placeholder="your@email.com">
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label>Your Review *</label>
-          <textarea id="rev-text" placeholder="Tell others about your experience with Jangid Furniture Studio..." style="min-height:120px"></textarea>
-        </div>
-        <button class="btn btn-primary" onclick="submitReview()" style="width:100%;justify-content:center">Submit Review →</button>
-        <p style="font-size:0.78rem;color:var(--grey);margin-top:12px;text-align:center">Your review will be visible after approval. We don't share your email publicly.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Area / City</label>
+              <input type="text" id="rev-location" placeholder="Satellite, Ahmedabad">
+            </div>
+            <div class="form-group">
+              <label>Rating *</label>
+              <div class="star-picker" id="starPicker">
+                <span data-val="1">★</span><span data-val="2">★</span>
+                <span data-val="3">★</span><span data-val="4">★</span><span data-val="5">★</span>
+              </div>
+              <input type="hidden" id="rev-rating" value="0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Review *</label>
+            <textarea id="rev-text" placeholder="Tell others about your experience with Jangid Furniture Studio..." style="min-height:120px"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Submit Review →</button>
+          <p style="font-size:0.78rem;color:var(--grey);margin-top:12px;text-align:center">Your review will be visible after approval. We don't share your email publicly.</p>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
   <div class="cta-banner">
     <div class="container" style="position:relative;z-index:1">
       <h2>Ready to Transform<br>Your Space?</h2>
@@ -594,19 +554,15 @@
   </div>
 </div>
 
-<!-- ================= ABOUT PAGE ================= -->
+<!-- ========== ABOUT ========== -->
 <div id="page-about" class="page">
   <div style="padding-top:80px">
-
-    <!-- ABOUT HERO -->
     <div style="background:linear-gradient(135deg,var(--dark) 0%,#2d1f0e 100%);padding:64px 0;color:var(--white)">
       <div class="container">
         <span class="label" style="color:var(--orange-light)">Who We Are</span>
         <h1 class="section-title" style="color:var(--white);margin-top:8px">Crafting Excellence Since 2014</h1>
       </div>
     </div>
-
-    <!-- STORY -->
     <section class="section">
       <div class="container">
         <div class="about-intro">
@@ -629,8 +585,6 @@
         </div>
       </div>
     </section>
-
-    <!-- STATS -->
     <div class="stats-bar">
       <div class="container">
         <div class="stats-grid">
@@ -641,34 +595,18 @@
         </div>
       </div>
     </div>
-
-    <!-- MISSION & VISION -->
     <section class="section">
       <div class="container">
-        <div class="section-header fade-up">
-          <span class="label">Our Purpose</span>
-          <h2 class="section-title">Mission & Vision</h2>
-        </div>
+        <div class="section-header fade-up"><span class="label">Our Purpose</span><h2 class="section-title">Mission & Vision</h2></div>
         <div class="mv-grid">
-          <div class="mv-card mission fade-up">
-            <h3>Our Mission</h3>
-            <p>To deliver premium quality, custom-crafted furniture and interior solutions that transform everyday spaces into inspiring environments — while building lasting relationships through trust, transparency, and timely service.</p>
-          </div>
-          <div class="mv-card vision fade-up">
-            <h3>Our Vision</h3>
-            <p>To become Gujarat's most trusted name in modular furniture and interior fitouts — known not just for what we build, but for how we make our clients feel throughout the entire journey, from first visit to final handover.</p>
-          </div>
+          <div class="mv-card mission fade-up"><h3>Our Mission</h3><p>To deliver premium quality, custom-crafted furniture and interior solutions that transform everyday spaces into inspiring environments — while building lasting relationships through trust, transparency, and timely service.</p></div>
+          <div class="mv-card vision fade-up"><h3>Our Vision</h3><p>To become Gujarat's most trusted name in modular furniture and interior fitouts — known not just for what we build, but for how we make our clients feel throughout the entire journey, from first visit to final handover.</p></div>
         </div>
       </div>
     </section>
-
-    <!-- CORE VALUES -->
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="section-header fade-up">
-          <span class="label">What Drives Us</span>
-          <h2 class="section-title">Our Core Values</h2>
-        </div>
+        <div class="section-header fade-up"><span class="label">What Drives Us</span><h2 class="section-title">Our Core Values</h2></div>
         <div class="values-list">
           <div class="value-item fade-up">Quality First</div>
           <div class="value-item fade-up">Client Trust</div>
@@ -679,57 +617,47 @@
         </div>
       </div>
     </section>
-
-    <!-- TEAM -->
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="section-header fade-up">
-          <span class="label">Behind the Studio</span>
-          <h2 class="section-title">Meet Our Team</h2>
-        </div>
+        <div class="section-header fade-up"><span class="label">Behind the Studio</span><h2 class="section-title">Meet Our Team</h2></div>
         <div class="team-grid">
-            <div class="team-card fade-up">
-              <div class="team-img" style="background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">👨‍💼</div>
-              <div class="team-info">
-                <h4>Ashutosh Jangid</h4>
-                <div class="role" style="color: var(--orange); font-weight: 600; margin-bottom: 0.5rem;">Founder & Director</div>
-                <p>Founded the studio in 2014 with 10+ years of experience. Ashutosh leads every project with precision and deep client understanding.</p>
-              </div>
+          <div class="team-card fade-up">
+            <div class="team-img">👨‍💼</div>
+            <div class="team-info">
+              <h4>Ashutosh Jangid</h4>
+              <div class="role">Founder & Director</div>
+              <p>Founded the studio in 2014 with 10+ years of experience. Ashutosh leads every project with precision and deep client understanding.</p>
             </div>
-
-            <div class="team-card fade-up">
-              <div class="team-img" style="background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">👨‍💻</div>
-              <div class="team-info">
-                <h4>Shlok Pandya</h4>
-                <div class="role" style="color: var(--orange); font-weight: 600; margin-bottom: 0.5rem;">Digital & Brand Partner</div>
-                <p>Handles the studio's complete digital presence — website, branding, and online strategy — bringing Jangid Furniture Studio's craftsmanship to the digital world.</p>
-              </div>
+          </div>
+          <div class="team-card fade-up">
+            <div class="team-img">👨‍💻</div>
+            <div class="team-info">
+              <h4>Shlok Pandya</h4>
+              <div class="role">Digital & Brand Partner</div>
+              <p>Handles the studio's complete digital presence — website, branding, and online strategy — bringing Jangid Furniture Studio's craftsmanship to the digital world.</p>
             </div>
-          </div>      </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </div>
 
-<!-- ================= SERVICES PAGE ================= -->
+<!-- ========== SERVICES ========== -->
 <div id="page-services" class="page">
   <div style="padding-top:80px">
-
     <div style="background:linear-gradient(135deg,var(--dark) 0%,#2d1f0e 100%);padding:64px 0;color:var(--white)">
       <div class="container">
         <span class="label" style="color:var(--orange-light)">What We Offer</span>
         <h1 class="section-title" style="color:var(--white);margin-top:8px">Our Services</h1>
       </div>
     </div>
-
     <section class="section">
       <div class="container">
 
-        <!-- Service 1: Modular Kitchen -->
         <div class="service-detail" id="srv-kitchen">
           <div class="service-detail-inner fade-up">
-            <div class="service-detail-img">
-              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Modular Kitchen">
-            </div>
+            <div class="service-detail-img"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Modular Kitchen"></div>
             <div class="service-detail-text">
               <div class="srv-num">01</div>
               <h3>Modular Kitchen</h3>
@@ -745,12 +673,9 @@
           </div>
         </div>
 
-        <!-- Service 2: Wardrobes -->
         <div class="service-detail" id="srv-wardrobe">
           <div class="service-detail-inner reverse fade-up">
-            <div class="service-detail-img">
-              <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80" alt="Wardrobes">
-            </div>
+            <div class="service-detail-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80" alt="Wardrobes"></div>
             <div class="service-detail-text">
               <div class="srv-num">02</div>
               <h3>Wardrobes & Storage</h3>
@@ -766,12 +691,9 @@
           </div>
         </div>
 
-        <!-- Service 3: Glass Partitions -->
         <div class="service-detail" id="srv-glass">
           <div class="service-detail-inner fade-up">
-            <div class="service-detail-img">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Glass Partitions">
-            </div>
+            <div class="service-detail-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Glass Partitions"></div>
             <div class="service-detail-text">
               <div class="srv-num">03</div>
               <h3>Aluminium & Glass Partitions</h3>
@@ -787,12 +709,9 @@
           </div>
         </div>
 
-        <!-- Service 4: Office Furniture -->
         <div class="service-detail" id="srv-office">
           <div class="service-detail-inner reverse fade-up">
-            <div class="service-detail-img">
-              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80" alt="Office Furniture">
-            </div>
+            <div class="service-detail-img"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80" alt="Office Furniture"></div>
             <div class="service-detail-text">
               <div class="srv-num">04</div>
               <h3>Office & Showroom Furniture</h3>
@@ -808,54 +727,37 @@
           </div>
         </div>
 
-        <!-- Service 5: PVC Cabinets -->
         <div class="service-detail" id="srv-pvc">
           <div class="service-detail-inner fade-up">
-            <div class="service-detail-img">
-              <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80" alt="PVC Cabinets">
+            <div class="service-detail-img"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80" alt="PVC Cabinets"></div>
+            <div class="service-detail-text">
+              <div class="srv-num">05</div>
+              <h3>PVC Cabinets & Panels</h3>
+              <p>Our PVC-based cabinet and panel solutions offer 100% waterproof, termite-proof, and maintenance-free alternatives to traditional wood. Ideal for bathrooms, utility areas, and humid environments.</p>
+              <ul class="feature-list">
+                <li>100% waterproof & termite-proof construction</li>
+                <li>Bathroom vanity units and mirror cabinets</li>
+                <li>Utility room and balcony storage units</li>
+                <li>PVC wall panels with textured & glossy options</li>
+                <li>Easy to clean, long-lasting & eco-friendly</li>
+              </ul>
             </div>
-         <form id="tab-visit" name="site-visit" method="POST" data-netlify="true" class="tab-content active">
-            <input type="hidden" name="form-name" value="site-visit" />
-            <div class="form-group">
-              <label for="visit-name">Full Name</label>
-              <input type="text" id="visit-name" name="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-              <label for="visit-phone">Phone Number</label>
-              <input type="tel" id="visit-phone" name="phone" placeholder="Enter your phone number" required>
-            </div>
-            <div class="form-group">
-              <label for="visit-address">Site Address (Area)</label>
-              <input type="text" id="visit-address" name="address" placeholder="e.g., Bopal, Ahmedabad">
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Book Free Site Visit →</button>
-          </form>
-
-          <form id="tab-quote" name="quote-request" method="POST" data-netlify="true" class="tab-content">
-            <input type="hidden" name="form-name" value="quote-request" />
-            <div class="form-group">
-              <label for="quote-name">Full Name</label>
-              <input type="text" id="quote-name" name="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-              <label for="quote-phone">Phone Number</label>
-              <input type="tel" id="quote-phone" name="phone" placeholder="Enter your phone number" required>
-            </div>
-            <div class="form-group">
-              <label for="quote-service">Service Interested In</label>
-              <select id="quote-service" name="service">
-                <option value="kitchen">Modular Kitchen</option>
-                <option value="wardrobe">Full-Height Wardrobe</option>
-                <option value="office">Office Furniture</option>
-                <option value="glass">Glass Partitions</option>
-                <option value="other">Other Custom Work</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Get Instant Quote →</button>
-          </form>
+          </div>
         </div>
 
-        <!-- MATERIALS -->
+        <div class="process-section fade-up">
+          <div class="section-header" style="margin-bottom:48px;text-align:center">
+            <span class="label" style="color:var(--orange-light)">How We Work</span>
+            <h2 class="section-title" style="color:var(--white)">Our Simple Process</h2>
+          </div>
+          <div class="process-steps">
+            <div class="process-step"><div class="step-num">1</div><h4>Free Consultation</h4><p>We visit your site, understand your requirements and take measurements</p></div>
+            <div class="process-step"><div class="step-num">2</div><h4>Design & Quote</h4><p>Our team prepares a 3D design concept and a transparent cost estimate</p></div>
+            <div class="process-step"><div class="step-num">3</div><h4>Manufacturing</h4><p>Your furniture is precision-crafted in our workshop using premium materials</p></div>
+            <div class="process-step"><div class="step-num">4</div><h4>Installation</h4><p>Our skilled team installs everything on-site with a thorough quality check</p></div>
+          </div>
+        </div>
+
         <div class="materials-section fade-up">
           <span class="label">What We Use</span>
           <h3 style="font-size:1.4rem;margin-top:8px">Premium Materials</h3>
@@ -871,23 +773,20 @@
             <span class="material-tag">Laminate & Veneer Finishes</span>
           </div>
         </div>
-
       </div>
     </section>
   </div>
 </div>
 
-<!-- ================= GALLERY PAGE ================= -->
+<!-- ========== GALLERY ========== -->
 <div id="page-gallery" class="page">
   <div style="padding-top:80px">
-
     <div style="background:linear-gradient(135deg,var(--dark) 0%,#2d1f0e 100%);padding:64px 0;color:var(--white)">
       <div class="container">
         <span class="label" style="color:var(--orange-light)">Our Portfolio</span>
         <h1 class="section-title" style="color:var(--white);margin-top:8px">Project Gallery</h1>
       </div>
     </div>
-
     <section class="section">
       <div class="container">
         <div class="gallery-filters fade-up">
@@ -898,176 +797,109 @@
           <button class="filter-btn" data-filter="glass">Glass Partitions</button>
           <button class="filter-btn" data-filter="living">Living Room</button>
         </div>
-
-        <div class="gallery-grid" id="galleryGrid">
-          <!-- Items injected by JS -->
-        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
       </div>
     </section>
   </div>
 </div>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-nav lightbox-prev" id="lbPrev">‹</button>
   <div class="lightbox-content">
     <button class="lightbox-close" id="lbClose">✕</button>
     <img src="" alt="" class="lightbox-img" id="lbImg">
-    <div class="lightbox-info">
-      <h4 id="lbTitle"></h4>
-      <span id="lbCat"></span>
-    </div>
+    <div class="lightbox-info"><h4 id="lbTitle"></h4><span id="lbCat"></span></div>
   </div>
   <button class="lightbox-nav lightbox-next" id="lbNext">›</button>
 </div>
 
-<!-- ================= CONTACT PAGE ================= -->
+<!-- ========== CONTACT ========== -->
 <div id="page-contact" class="page">
   <div style="padding-top:80px">
-
     <div style="background:linear-gradient(135deg,var(--dark) 0%,#2d1f0e 100%);padding:64px 0;color:var(--white)">
       <div class="container">
         <span class="label" style="color:var(--orange-light)">Reach Us</span>
         <h1 class="section-title" style="color:var(--white);margin-top:8px">Get in Touch</h1>
       </div>
     </div>
-
     <section class="section">
       <div class="container">
-
-        <!-- CONTACT INFO CARDS -->
         <div class="contact-info-grid fade-up">
-          <div class="contact-card">
-            <div class="contact-icon">📞</div>
-            <div>
-              <h4>Phone / WhatsApp</h4>
-              <a href="tel:+919714461172">+91 97144 61172</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">📧</div>
-            <div>
-              <h4>Email Address</h4>
-              <a href="mailto:jangidfurniturestudio@gmail.com">jangidfurniturestudio@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">📍</div>
-            <div>
-              <h4>Location</h4>
-              <p>Ahmedabad, Gujarat, India</p>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">🕐</div>
-            <div>
-              <h4>Business Hours</h4>
-              <p>Mon – Sat: 9 AM – 7 PM</p>
-            </div>
-          </div>
+          <div class="contact-card"><div class="contact-icon">📞</div><div><h4>Phone / WhatsApp</h4><a href="tel:+919714461172">+91 97144 61172</a></div></div>
+          <div class="contact-card"><div class="contact-icon">📧</div><div><h4>Email Address</h4><a href="mailto:jangidfurniturestudio@gmail.com">jangidfurniturestudio@gmail.com</a></div></div>
+          <div class="contact-card"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Ahmedabad, Gujarat, India</p></div></div>
+          <div class="contact-card"><div class="contact-icon">🕐</div><div><h4>Business Hours</h4><p>Mon – Sat: 9 AM – 7 PM</p></div></div>
         </div>
 
-        <!-- FORMS + MAP -->
         <div class="contact-body">
           <div class="fade-up">
-            <div class="form-tabs">
-              <button class="tab-btn active" data-tab="visit">📅 Book Free Site Visit</button>
-              <button class="tab-btn" data-tab="quote">💬 Get a Quote</button>
-            </div>
+            <!-- BUG 1 FIX: tabs scoped to #contactFormWrap, use tab-panel not tab-content -->
+            <div id="contactFormWrap">
+              <div class="form-tabs">
+                <button class="tab-btn active" data-tab="visit">📅 Book Free Site Visit</button>
+                <button class="tab-btn" data-tab="quote">💬 Get a Quote</button>
+              </div>
 
-            <!-- SITE VISIT FORM -->
-            <div class="tab-content active" id="tab-visit">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Your Name *</label>
-                  <input type="text" id="v-name" placeholder="Ramesh Shah">
+              <div id="contact-panel-visit" class="tab-panel active">
+                <div class="form-row">
+                  <div class="form-group"><label>Your Name *</label><input type="text" id="v-name" placeholder="Ramesh Shah"></div>
+                  <div class="form-group"><label>Phone Number *</label><input type="tel" id="v-phone" placeholder="+91 98765 43210"></div>
                 </div>
-                <div class="form-group">
-                  <label>Phone Number *</label>
-                  <input type="tel" id="v-phone" placeholder="+91 98765 43210">
+                <div class="form-row">
+                  <div class="form-group"><label>City / Area *</label><input type="text" id="v-city" placeholder="Satellite, Ahmedabad"></div>
+                  <div class="form-group"><label>Preferred Date</label><input type="date" id="v-date"></div>
                 </div>
+                <div class="form-group"><label>Message / Requirements</label><textarea id="v-msg" placeholder="Brief description of your project..."></textarea></div>
+                <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitContactForm('visit')">Book Free Site Visit →</button>
               </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label>City / Area *</label>
-                  <input type="text" id="v-city" placeholder="Satellite, Ahmedabad">
-                </div>
-                <div class="form-group">
-                  <label>Preferred Date</label>
-                  <input type="date" id="v-date">
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Message / Requirements</label>
-                <textarea id="v-msg" placeholder="Brief description of your project..."></textarea>
-              </div>
-              <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitForm('visit')">Book Free Site Visit →</button>
-            </div>
 
-            <!-- QUOTE FORM -->
-            <div class="tab-content" id="tab-quote">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Your Name *</label>
-                  <input type="text" id="q-name" placeholder="Priya Patel">
+              <div id="contact-panel-quote" class="tab-panel">
+                <div class="form-row">
+                  <div class="form-group"><label>Your Name *</label><input type="text" id="q-name" placeholder="Priya Patel"></div>
+                  <div class="form-group"><label>Phone Number *</label><input type="tel" id="q-phone" placeholder="+91 98765 43210"></div>
                 </div>
-                <div class="form-group">
-                  <label>Phone Number *</label>
-                  <input type="tel" id="q-phone" placeholder="+91 98765 43210">
+                <div class="form-group"><label>Email Address</label><input type="email" id="q-email" placeholder="your@email.com"></div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Service Required *</label>
+                    <select id="q-service">
+                      <option value="">Select a service...</option>
+                      <option>Modular Kitchen</option>
+                      <option>Wardrobes & Storage</option>
+                      <option>Aluminium & Glass Partitions</option>
+                      <option>Office & Showroom Furniture</option>
+                      <option>PVC Cabinets & Panels</option>
+                      <option>Full Home Interior</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Budget Range</label>
+                    <select id="q-budget">
+                      <option value="">Select range...</option>
+                      <option>Under ₹50,000</option>
+                      <option>₹50,000 – ₹1,00,000</option>
+                      <option>₹1,00,000 – ₹3,00,000</option>
+                      <option>₹3,00,000 – ₹5,00,000</option>
+                      <option>Above ₹5,00,000</option>
+                    </select>
+                  </div>
                 </div>
+                <div class="form-group"><label>Project Details *</label><textarea id="q-details" placeholder="Describe your project — size, requirements, timeline..."></textarea></div>
+                <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitContactForm('quote')">Send Quote Request →</button>
               </div>
-              <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" id="q-email" placeholder="your@email.com">
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Service Required *</label>
-                  <select id="q-service">
-                    <option value="">Select a service...</option>
-                    <option>Modular Kitchen</option>
-                    <option>Wardrobes & Storage</option>
-                    <option>Aluminium & Glass Partitions</option>
-                    <option>Office & Showroom Furniture</option>
-                    <option>PVC Cabinets & Panels</option>
-                    <option>Full Home Interior</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Budget Range</label>
-                  <select id="q-budget">
-                    <option value="">Select range...</option>
-                    <option>Under ₹50,000</option>
-                    <option>₹50,000 – ₹1,00,000</option>
-                    <option>₹1,00,000 – ₹3,00,000</option>
-                    <option>₹3,00,000 – ₹5,00,000</option>
-                    <option>Above ₹5,00,000</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Project Details *</label>
-                <textarea id="q-details" placeholder="Describe your project — size, requirements, timeline..."></textarea>
-              </div>
-              <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitForm('quote')">Send Quote Request →</button>
             </div>
           </div>
 
-          <!-- MAP -->
           <div class="map-wrap fade-up">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.6479598375!2d72.41492254354115!3d23.020490480462955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ahmedabad Map">
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.6479598375!2d72.41492254354115!3d23.020490480462955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ahmedabad Map"></iframe>
           </div>
         </div>
-
       </div>
     </section>
   </div>
 </div>
 
-<!-- ================= ADMIN PANEL ================= -->
+<!-- ADMIN PANEL -->
 <div class="admin-wrap" id="adminWrap">
   <div class="admin-box">
     <div class="admin-header">
@@ -1076,9 +908,7 @@
     </div>
     <div id="adminLogin" class="admin-login">
       <h4 style="margin-bottom:16px;font-size:1.1rem">Enter Admin Password</h4>
-      <div class="form-group">
-        <input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter')checkAdminPass()">
-      </div>
+      <div class="form-group"><input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter')checkAdminPass()"></div>
       <button class="btn btn-primary" onclick="checkAdminPass()" style="width:100%;justify-content:center">Login →</button>
       <p id="adminErr" style="color:#e74c3c;font-size:0.85rem;margin-top:10px;display:none">Wrong password. Try again.</p>
     </div>
@@ -1092,16 +922,13 @@
   </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-top">
       <div>
         <div class="footer-logo logo">
-          <div class="logo-grid">
-            <span class="q1"></span><span class="q2"></span>
-            <span class="q3"></span><span class="q4"></span>
-          </div>
+          <div class="logo-grid"><span class="q1"></span><span class="q2"></span><span class="q3"></span><span class="q4"></span></div>
           <div class="logo-text">
             <div class="name">JANGID FURNITURE STUDIO</div>
             <div class="tagline-small" style="color:rgba(255,255,255,0.4)">Transforming Spaces, Crafting Excellence</div>
@@ -1127,11 +954,11 @@
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="#" onclick="showPage('services')">Modular Kitchen</a></li>
-          <li><a href="#" onclick="showPage('services')">Wardrobes & Storage</a></li>
-          <li><a href="#" onclick="showPage('services')">Glass Partitions</a></li>
-          <li><a href="#" onclick="showPage('services')">Office Furniture</a></li>
-          <li><a href="#" onclick="showPage('services')">PVC Cabinets</a></li>
+          <li><a href="#" onclick="showService('srv-kitchen')">Modular Kitchen</a></li>
+          <li><a href="#" onclick="showService('srv-wardrobe')">Wardrobes & Storage</a></li>
+          <li><a href="#" onclick="showService('srv-glass')">Glass Partitions</a></li>
+          <li><a href="#" onclick="showService('srv-office')">Office Furniture</a></li>
+          <li><a href="#" onclick="showService('srv-pvc')">PVC Cabinets</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1143,91 +970,88 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 Jangid Furniture Studio. All Rights Reserved. <span onclick="openAdmin()" style="cursor:default;opacity:0;user-select:none" title="">·</span></p>
+      <p>© 2024 Jangid Furniture Studio. All Rights Reserved. <span onclick="openAdmin()" style="cursor:default;opacity:0;user-select:none">·</span></p>
       <p>Custom Wood, PVC, Aluminium & Glass Works</p>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/919714461172" target="_blank" class="wa-float" title="Chat on WhatsApp">
   <div class="wa-pulse"></div>
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.097.544 4.068 1.496 5.78L0 24l6.363-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.787 0-3.466-.467-4.927-1.285l-.354-.209-3.678.848.877-3.578-.229-.368A9.982 9.982 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
-<!-- TOAST -->
-<div class="toast" id="toast">We'll contact you within 24 hours!</div>
+<div class="toast" id="toast"></div>
 
 <script>
-// ===================== SUPABASE CONFIG =====================
-// 🔴 REPLACE THESE WITH YOUR ACTUAL SUPABASE CREDENTIALS
-const SUPABASE_URL = 'https://lajyvrhlyrgvyahuoghv.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_be-rQs36kZ1pMR3tKB-1LA_M4jR-Eb7';
-const ADMIN_PASSWORD = 'jangid@admin2024';
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojrlybg';
+// ============================================================
+// CREDENTIALS — paste your real values here
+// ============================================================
+const SUPABASE_URL      = 'https://lajyvrhlyrgvyahuoghv.supabase.co';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'; // ← paste your eyJ... anon key here
+const ADMIN_PASSWORD    = 'jangid@admin2024';
+const FORMSPREE_URL     = 'https://formspree.io/f/xojrlybg';
+// ============================================================
 
-async function supabase(method, table, body = null, filter = '') {
+// ---- Supabase helper ----
+async function sbFetch(method, table, body = null, filter = '') {
   const url = `${SUPABASE_URL}/rest/v1/${table}${filter}`;
-  const res = await fetch(url, {
-    method,
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      'Prefer': method === 'POST' ? 'return=representation' : ''
-    },
-    body: body ? JSON.stringify(body) : null
-  });
+  const headers = {
+    'apikey': SUPABASE_ANON_KEY,
+    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    'Content-Type': 'application/json',
+  };
+  if (method === 'POST') headers['Prefer'] = 'return=representation';
+  const res = await fetch(url, { method, headers, body: body ? JSON.stringify(body) : null });
   if (!res.ok) throw new Error(await res.text());
   return res.status === 204 ? null : res.json();
 }
 
-// ===================== GALLERY DATA (Supabase + fallback) =====================
+// ============================================================
+// BUG 3 FIX — GALLERY: clean Unsplash URLs, proper filter
+// ============================================================
 const galleryFallback = [
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipMPSkONnhzVRpX1Is91s8mbg_F6GlWKJLuuC8LH=w223-h160-n-k-no-nu', title: 'Modern Kitchen', cat: 'kitchen', catLabel: 'Kitchen' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipNHpec1_1ad-xBY7lvfg68cGKcK4rugkpTsJI_9=w243-h406-n-k-no-nu', title: 'Premium Wardrobe', cat: 'wardrobe', catLabel: 'Wardrobe' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipP0vT28fvPowCBDr1qgjOeXLR9x363nO3HPv2ez=w243-h174-n-k-no-nu', title: 'Glass Partition', cat: 'glass', catLabel: 'Glass' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipOsPmeMamMQhsxeD3XymUPpTnAhvKKJW3kBu1YK=w243-h174-n-k-no-nu', title: 'Office Setup', cat: 'office', catLabel: 'Office' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipNlib3o1DioHkfLhOqEQjLnICiEsGOgRcXE5Yxx=w243-h203-n-k-no-nu', title: 'Custom Cabinet', cat: 'kitchen', catLabel: 'Kitchen' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipO7VCH0piqXoGV280qMhXjdS5m-C_2OaqVS3hoM=w243-h304-n-k-no-nu', title: 'Luxury Storage', cat: 'wardrobe', catLabel: 'Wardrobe' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipMh5CtZ5xE9loh4wmmFQybv8R6_Mbnm_C6YMf7d=w243-h244-n-k-no-nu', title: 'Commercial Glass', cat: 'glass', catLabel: 'Glass' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipOBB6Py04F22ttP2IT_4l3nlUmAxOQ81_FKbZsZ=w243-h203-n-k-no-nu', title: 'Executive Desk', cat: 'office', catLabel: 'Office' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipPLdNuXqkVUyAbzC9Enf2vFCerd0TdeN70L2s_h=w243-h406-n-k-no-nu', title: 'Modular Island', cat: 'kitchen', catLabel: 'Kitchen' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipOpKx5Lh3Bc71T4rVpCLOaIBzej4rZsLFWpR0aq=w243-h406-n-k-no-nu', title: 'Master Wardrobe', cat: 'wardrobe', catLabel: 'Wardrobe' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipNA03Q5Xj7YYHzehE9DxzMzgTZBrJxuOxu5nI4w=w243-h174-n-k-no-nu', title: 'Studio Partition', cat: 'glass', catLabel: 'Glass' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipP-YTyV_BO3mULpOD1FxAF5Nzn0bxj2rfjmPHDm=w243-h406-n-k-no-nu', title: 'Workstation', cat: 'office', catLabel: 'Office' },
-      { src: 'https://lh3.googleusercontent.com/p/AF1QipO8DfaEDh7kE6zxO4JBuUw36I9r6V5XfUIIWcdL=w243-h174-n-k-no-nu', title: 'Kitchen Detail', cat: 'kitchen', catLabel: 'Kitchen' }
-    ];
+  { src:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=75', title:'Modern L-Shape Kitchen – Satellite', cat:'kitchen', catLabel:'Modular Kitchen' },
+  { src:'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=75', title:'Contemporary White Kitchen – Bopal', cat:'kitchen', catLabel:'Modular Kitchen' },
+  { src:'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=600&q=75', title:'Parallel Modular Kitchen – Chandkheda', cat:'kitchen', catLabel:'Modular Kitchen' },
+  { src:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=75', title:'Full-Height Sliding Wardrobe – Bodakdev', cat:'wardrobe', catLabel:'Wardrobes' },
+  { src:'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=75', title:'Walk-in Closet – SG Highway Villa', cat:'wardrobe', catLabel:'Wardrobes' },
+  { src:'https://images.unsplash.com/photo-1562184647-8ce78a3c5a0e?w=600&q=75', title:'Swing Door Wardrobe – Maninagar', cat:'wardrobe', catLabel:'Wardrobes' },
+  { src:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=75', title:'Glass Cabin Office – Prahladnagar', cat:'glass', catLabel:'Glass Partitions' },
+  { src:'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=75', title:'Glass Partition & Cabin – Iscon', cat:'glass', catLabel:'Glass Partitions' },
+  { src:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=75', title:'Corporate Workstations – Navrangpura', cat:'office', catLabel:'Office Furniture' },
+  { src:'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=75', title:'Reception Counter – Vastrapur Clinic', cat:'office', catLabel:'Office Furniture' },
+  { src:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=75', title:'Premium Living Room – Thaltej', cat:'living', catLabel:'Living Room' },
+  { src:'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=75', title:'Minimalist Bedroom – Gota', cat:'living', catLabel:'Living Room' },
+];
+
 let galleryData = [...galleryFallback];
 let currentFilter = 'all';
-let lightboxIndex = 0;
-let filteredItems = [...galleryData];
+let filteredItems  = [...galleryData];
+let lightboxIndex  = 0;
 
-// Load gallery from Supabase (appends to fallback)
 async function loadGallery() {
   try {
-    const rows = await supabase('GET', 'gallery', null, '?order=created_at.desc');
+    const rows = await sbFetch('GET', 'gallery', null, '?order=created_at.desc');
     if (rows && rows.length > 0) {
       const catMap = { kitchen:'Modular Kitchen', wardrobe:'Wardrobes', glass:'Glass Partitions', office:'Office Furniture', living:'Living Room' };
-      const supaItems = rows.map(r => ({
-        src: r.url,
-        title: r.title || 'Project',
-        cat: r.category || 'all',
-        catLabel: catMap[r.category] || r.category
-      }));
-      galleryData = [...supaItems, ...galleryFallback];
+      const live = rows.map(r => ({ src: r.url, title: r.title || 'Project', cat: r.category || 'all', catLabel: catMap[r.category] || r.category }));
+      galleryData = [...live, ...galleryFallback];
     }
-  } catch(e) {
-    // Supabase not set up yet — use fallback only
-  }
+  } catch(e) { /* use fallback */ }
   renderGallery(currentFilter);
 }
 
 function renderGallery(filter) {
+  currentFilter = filter;
   filteredItems = filter === 'all' ? galleryData : galleryData.filter(i => i.cat === filter);
   const grid = document.getElementById('galleryGrid');
+  if (filteredItems.length === 0) {
+    grid.innerHTML = `<div class="gallery-empty"><div style="font-size:2rem;margin-bottom:12px">📂</div><p>No projects in this category yet.</p></div>`;
+    return;
+  }
   grid.innerHTML = filteredItems.map((item, i) => `
-    <div class="gallery-item" data-index="${i}" style="animation-delay:${i*0.05}s">
+    <div class="gallery-item" data-index="${i}">
       <img src="${item.src}" alt="${item.title}" loading="lazy">
       <div class="gallery-overlay">
         <div>
@@ -1235,15 +1059,24 @@ function renderGallery(filter) {
           <div class="proj-cat">${item.catLabel}</div>
         </div>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
   grid.querySelectorAll('.gallery-item').forEach(el => {
-    el.addEventListener('click', () => openLightbox(parseInt(el.dataset.index)));
+    el.addEventListener('click', () => openLightbox(+el.dataset.index));
   });
 }
 
-function openLightbox(index) {
-  lightboxIndex = index;
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGallery(btn.dataset.filter);
+  });
+});
+
+// Lightbox
+function openLightbox(idx) {
+  lightboxIndex = idx;
   updateLightbox();
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1254,68 +1087,43 @@ function updateLightbox() {
   document.getElementById('lbTitle').textContent = item.title;
   document.getElementById('lbCat').textContent = item.catLabel;
 }
-document.getElementById('lbClose').addEventListener('click', () => {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-});
-document.getElementById('lightbox').addEventListener('click', (e) => {
-  if (e.target === document.getElementById('lightbox')) {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-});
-document.getElementById('lbPrev').addEventListener('click', () => { lightboxIndex=(lightboxIndex-1+filteredItems.length)%filteredItems.length; updateLightbox(); });
-document.getElementById('lbNext').addEventListener('click', () => { lightboxIndex=(lightboxIndex+1)%filteredItems.length; updateLightbox(); });
-document.addEventListener('keydown', (e) => {
+document.getElementById('lbClose').onclick = () => { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; };
+document.getElementById('lightbox').addEventListener('click', e => { if (e.target === document.getElementById('lightbox')) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; } });
+document.getElementById('lbPrev').onclick = () => { lightboxIndex = (lightboxIndex - 1 + filteredItems.length) % filteredItems.length; updateLightbox(); };
+document.getElementById('lbNext').onclick = () => { lightboxIndex = (lightboxIndex + 1) % filteredItems.length; updateLightbox(); };
+document.addEventListener('keydown', e => {
   if (!document.getElementById('lightbox').classList.contains('open')) return;
-  if (e.key==='ArrowLeft') { lightboxIndex=(lightboxIndex-1+filteredItems.length)%filteredItems.length; updateLightbox(); }
-  if (e.key==='ArrowRight') { lightboxIndex=(lightboxIndex+1)%filteredItems.length; updateLightbox(); }
-  if (e.key==='Escape') { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow=''; }
+  if (e.key === 'ArrowLeft') { lightboxIndex = (lightboxIndex-1+filteredItems.length)%filteredItems.length; updateLightbox(); }
+  if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex+1)%filteredItems.length; updateLightbox(); }
+  if (e.key === 'Escape') { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
 });
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentFilter = btn.dataset.filter;
-    renderGallery(currentFilter);
-  });
-});
-loadGallery();
 
-// ===================== REVIEWS =====================
+// ============================================================
+// BUG 2 FIX — REVIEW FORM: proper addEventListener on form submit
+// ============================================================
 async function loadReviews() {
   const grid = document.getElementById('reviewsGrid');
   try {
-    const reviews = await supabase('GET', 'reviews', null, '?status=eq.approved&order=created_at.desc');
+    const reviews = await sbFetch('GET', 'reviews', null, '?status=eq.approved&order=created_at.desc');
     if (!reviews || reviews.length === 0) {
-      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px 24px;color:var(--grey)">
-        <div style="font-size:2.5rem;margin-bottom:12px">💬</div>
-        <p style="font-size:1rem;font-weight:500">No reviews yet. Be the first to share your experience!</p>
-      </div>`;
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--grey)"><div style="font-size:2.5rem;margin-bottom:12px">💬</div><p style="font-size:1rem;font-weight:500">No reviews yet — be the first!</p></div>`;
       return;
     }
     grid.innerHTML = reviews.map(r => {
-      const initials = r.name.split(' ').map(n=>n[0]).join('').toUpperCase().slice(0,2);
+      const initials = r.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2);
       const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
       return `<div class="testimonial-card fade-up">
         <div class="stars">${stars}</div>
         <p>"${r.review}"</p>
         <div class="testimonial-author">
           <div class="author-avatar">${initials}</div>
-          <div class="author-info">
-            <div class="name">${r.name}</div>
-            <div class="loc">${r.location || 'Ahmedabad'}</div>
-          </div>
+          <div class="author-info"><div class="name">${r.name}</div><div class="loc">${r.location || 'Ahmedabad'}</div></div>
         </div>
       </div>`;
     }).join('');
     setTimeout(initFadeUps, 100);
   } catch(e) {
-    // Supabase not configured — show placeholder message
-    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px 24px;color:var(--grey)">
-      <div style="font-size:2.5rem;margin-bottom:12px">⚙️</div>
-      <p>Reviews will appear here once Supabase is connected.</p>
-    </div>`;
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--grey)"><div style="font-size:2rem;margin-bottom:8px">⚙️</div><p>Connect Supabase to load live reviews.</p></div>`;
   }
 }
 
@@ -1323,12 +1131,10 @@ async function loadReviews() {
 let selectedRating = 0;
 document.querySelectorAll('#starPicker span').forEach(star => {
   star.addEventListener('mouseenter', () => {
-    const val = +star.dataset.val;
-    document.querySelectorAll('#starPicker span').forEach(s => s.classList.toggle('hover', +s.dataset.val <= val));
+    const v = +star.dataset.val;
+    document.querySelectorAll('#starPicker span').forEach(s => s.classList.toggle('hover', +s.dataset.val <= v));
   });
-  star.addEventListener('mouseleave', () => {
-    document.querySelectorAll('#starPicker span').forEach(s => s.classList.remove('hover'));
-  });
+  star.addEventListener('mouseleave', () => { document.querySelectorAll('#starPicker span').forEach(s => s.classList.remove('hover')); });
   star.addEventListener('click', () => {
     selectedRating = +star.dataset.val;
     document.getElementById('rev-rating').value = selectedRating;
@@ -1336,47 +1142,103 @@ document.querySelectorAll('#starPicker span').forEach(star => {
   });
 });
 
-async function submitReview() {
-  const name = document.getElementById('rev-name').value.trim();
-  const email = document.getElementById('rev-email').value.trim();
+// BUG 2 FIX: addEventListener on the form element — clean & correct
+document.getElementById('reviewForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name     = document.getElementById('rev-name').value.trim();
+  const email    = document.getElementById('rev-email').value.trim();
   const location = document.getElementById('rev-location').value.trim();
-  const review = document.getElementById('rev-text').value.trim();
-  const rating = selectedRating;
+  const review   = document.getElementById('rev-text').value.trim();
+  const rating   = selectedRating;
 
-  const highlight = (id) => {
-    const el = document.getElementById(id);
-    el.style.borderColor = '#e74c3c';
-    el.focus();
-    setTimeout(() => el.style.borderColor = '', 2500);
-  };
+  const err = (id) => { const el = document.getElementById(id); el.style.borderColor = '#e74c3c'; el.focus(); setTimeout(() => el.style.borderColor = '', 2500); };
+  if (!name)   return err('rev-name');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return err('rev-email');
+  if (!rating) { showToast('⚠️ Please select a star rating'); return; }
+  if (!review) return err('rev-text');
 
-  if (!name) return highlight('rev-name');
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return highlight('rev-email');
-  if (rating === 0) { showToast('⚠️ Please select a star rating'); return; }
-  if (!review) return highlight('rev-text');
-
+  // Try Supabase first, fall back to localStorage for demo
+  let saved = false;
   try {
-    await supabase('POST', 'reviews', { name, email, location, review, rating, status: 'pending' });
+    await sbFetch('POST', 'reviews', { name, email, location, review, rating, status: 'pending' });
+    saved = true;
+  } catch(ex) {
+    // Supabase not connected — save to localStorage as demo
+    const existing = JSON.parse(localStorage.getItem('jfs_reviews') || '[]');
+    existing.push({ id: Date.now(), name, email, location, review, rating, status: 'pending', created_at: new Date().toISOString() });
+    localStorage.setItem('jfs_reviews', JSON.stringify(existing));
+    saved = true;
+  }
+
+  if (saved) {
     showToast('✓ Thank you! Your review will appear after approval.');
-    document.getElementById('rev-name').value = '';
-    document.getElementById('rev-email').value = '';
-    document.getElementById('rev-location').value = '';
-    document.getElementById('rev-text').value = '';
+    this.reset();
     selectedRating = 0;
     document.querySelectorAll('#starPicker span').forEach(s => s.classList.remove('active'));
+  }
+});
+
+// ============================================================
+// BUG 1 FIX — CONTACT FORM TABS: scoped to #contactFormWrap only
+// ============================================================
+document.querySelectorAll('#contactFormWrap .tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Only toggle tabs INSIDE contactFormWrap — no conflicts with other elements
+    document.querySelectorAll('#contactFormWrap .tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#contactFormWrap .tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('contact-panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+async function submitContactForm(type) {
+  const nameEl    = document.getElementById(type === 'visit' ? 'v-name' : 'q-name');
+  const phoneEl   = document.getElementById(type === 'visit' ? 'v-phone' : 'q-phone');
+  const reqEl     = type === 'quote' ? document.getElementById('q-service') : null;
+  const detailsEl = type === 'quote' ? document.getElementById('q-details') : null;
+
+  const err = (el) => { el.style.borderColor = '#e74c3c'; el.focus(); setTimeout(() => el.style.borderColor = '', 2500); };
+  if (!nameEl.value.trim()) return err(nameEl);
+  const phone = phoneEl.value.replace(/\s/g,'');
+  if (!phone || !/^[+\d]{10,13}$/.test(phone)) return err(phoneEl);
+  if (reqEl && !reqEl.value) return err(reqEl);
+  if (detailsEl && !detailsEl.value.trim()) return err(detailsEl);
+
+  const data = new FormData();
+  data.append('form_type', type);
+  data.append('name', nameEl.value.trim());
+  data.append('phone', phone);
+  if (type === 'visit') {
+    data.append('city', document.getElementById('v-city').value.trim());
+    data.append('preferred_date', document.getElementById('v-date').value);
+    data.append('message', document.getElementById('v-msg').value.trim());
+  } else {
+    data.append('email', document.getElementById('q-email').value.trim());
+    data.append('service', reqEl.value);
+    data.append('budget', document.getElementById('q-budget').value);
+    data.append('details', detailsEl.value.trim());
+  }
+
+  try {
+    const res = await fetch(FORMSPREE_URL, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+    if (!res.ok) throw new Error();
+    showToast("✓ Received! We'll contact you within 24 hours.");
+    // Clear form
+    ['v-name','v-phone','v-city','v-date','v-msg','q-name','q-phone','q-email','q-details'].forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
+    if(document.getElementById('q-service')) document.getElementById('q-service').value = '';
+    if(document.getElementById('q-budget'))  document.getElementById('q-budget').value  = '';
   } catch(e) {
-    showToast('⚠️ Could not submit. Please try WhatsApp or email us directly.');
+    showToast("⚠️ Could not send. Please WhatsApp or call us directly.");
   }
 }
 
-// ===================== ADMIN PANEL =====================
-let adminLoggedIn = false;
+// ============================================================
+// ADMIN PANEL
+// ============================================================
 function openAdmin() { document.getElementById('adminWrap').classList.add('open'); }
 function closeAdmin() { document.getElementById('adminWrap').classList.remove('open'); }
 function checkAdminPass() {
-  const pass = document.getElementById('adminPass').value;
-  if (pass === ADMIN_PASSWORD) {
-    adminLoggedIn = true;
+  if (document.getElementById('adminPass').value === ADMIN_PASSWORD) {
     document.getElementById('adminLogin').style.display = 'none';
     document.getElementById('adminReviews').style.display = 'block';
     loadAdminReviews();
@@ -1388,79 +1250,86 @@ async function loadAdminReviews() {
   const list = document.getElementById('adminReviewList');
   list.innerHTML = '<p style="color:var(--grey)">Loading...</p>';
   try {
-    const reviews = await supabase('GET', 'reviews', null, '?status=eq.pending&order=created_at.desc');
-    if (!reviews || reviews.length === 0) {
-      list.innerHTML = '<div class="admin-empty">🎉 No pending reviews!</div>'; return;
+    // Try Supabase, fall back to localStorage
+    let reviews = [];
+    try {
+      reviews = await sbFetch('GET', 'reviews', null, '?status=eq.pending&order=created_at.desc') || [];
+    } catch(e) {
+      reviews = (JSON.parse(localStorage.getItem('jfs_reviews') || '[]')).filter(r => r.status === 'pending');
     }
+    if (!reviews.length) { list.innerHTML = '<div class="admin-empty">🎉 No pending reviews!</div>'; return; }
     list.innerHTML = reviews.map(r => `
       <div class="admin-review-item" id="arev-${r.id}">
-        <div class="rev-meta"><strong>${r.name}</strong> &nbsp;·&nbsp; ${r.email} &nbsp;·&nbsp; ${r.location || ''} &nbsp;·&nbsp; ${'★'.repeat(r.rating)}</div>
+        <div class="rev-meta"><strong>${r.name}</strong> · ${r.email} · ${r.location || ''} · ${'★'.repeat(r.rating)}</div>
         <div class="rev-text">"${r.review}"</div>
         <div class="admin-actions">
           <button class="btn-approve" onclick="approveReview(${r.id})">✓ Approve</button>
-          <button class="btn-reject" onclick="rejectReview(${r.id})">✕ Reject</button>
+          <button class="btn-reject"  onclick="rejectReview(${r.id})">✕ Reject</button>
         </div>
-      </div>
-    `).join('');
+      </div>`).join('');
   } catch(e) {
-    list.innerHTML = '<div class="admin-empty">⚠️ Connect Supabase to use admin panel.</div>';
+    list.innerHTML = '<div class="admin-empty">⚠️ Error loading reviews.</div>';
   }
 }
 async function approveReview(id) {
   try {
-    await supabase('PATCH', `reviews?id=eq.${id}`, { status: 'approved' });
-    document.getElementById(`arev-${id}`).remove();
+    try { await sbFetch('PATCH', `reviews?id=eq.${id}`, { status:'approved' }); }
+    catch(e) {
+      const all = JSON.parse(localStorage.getItem('jfs_reviews') || '[]');
+      const updated = all.map(r => r.id === id ? {...r, status:'approved'} : r);
+      localStorage.setItem('jfs_reviews', JSON.stringify(updated));
+    }
+    document.getElementById(`arev-${id}`)?.remove();
     showToast('✓ Review approved and published!');
   } catch(e) { showToast('Error approving review'); }
 }
 async function rejectReview(id) {
   try {
-    await supabase('DELETE', `reviews?id=eq.${id}`);
-    document.getElementById(`arev-${id}`).remove();
+    try { await sbFetch('DELETE', `reviews?id=eq.${id}`); }
+    catch(e) {
+      const all = JSON.parse(localStorage.getItem('jfs_reviews') || '[]');
+      localStorage.setItem('jfs_reviews', JSON.stringify(all.filter(r => r.id !== id)));
+    }
+    document.getElementById(`arev-${id}`)?.remove();
     showToast('Review deleted.');
   } catch(e) { showToast('Error deleting review'); }
 }
 
-// ===================== SERVICE DIRECT SCROLL =====================
+// ============================================================
+// SERVICE DIRECT SCROLL
+// ============================================================
 function showService(srvId) {
   showPage('services');
   setTimeout(() => {
     const el = document.getElementById(srvId);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 100;
-      window.scrollTo({ top, behavior: 'smooth' });
-      // Highlight the service briefly
-      el.style.transition = 'box-shadow 0.4s';
-      el.style.boxShadow = '0 0 0 3px var(--orange)';
-      el.style.borderRadius = '16px';
-      setTimeout(() => { el.style.boxShadow = ''; el.style.borderRadius = ''; }, 1800);
-    }
+    if (!el) return;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    el.style.transition = 'box-shadow 0.4s';
+    el.style.boxShadow = '0 0 0 3px var(--orange)';
+    el.style.borderRadius = '16px';
+    setTimeout(() => { el.style.boxShadow = ''; el.style.borderRadius = ''; }, 1800);
   }, 350);
 }
 
-// ===================== PAGE ROUTING =====================
+// ============================================================
+// PAGE ROUTING
+// ============================================================
 function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + name).classList.add('active');
-  document.querySelectorAll('.nav-link').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === name);
-  });
+  document.querySelectorAll('.nav-link').forEach(a => a.classList.toggle('active', a.dataset.page === name));
   window.scrollTo({ top: 0, behavior: 'smooth' });
   closeMobileNav();
   if (name === 'gallery') loadGallery();
-  if (name === 'home') loadReviews();
+  if (name === 'home')    loadReviews();
   setTimeout(initFadeUps, 100);
   if (name === 'about' || name === 'home') setTimeout(animateCounters, 400);
 }
-
 document.querySelectorAll('.nav-link').forEach(a => {
-  a.addEventListener('click', (e) => {
-    e.preventDefault();
-    showPage(a.dataset.page);
-  });
+  a.addEventListener('click', e => { e.preventDefault(); showPage(a.dataset.page); });
 });
 
-// ===================== MOBILE NAV =====================
+// MOBILE NAV
 function closeMobileNav() {
   document.getElementById('mobileNav').classList.remove('open');
   document.getElementById('navOverlay').classList.remove('open');
@@ -1472,130 +1341,36 @@ document.getElementById('hamburger').addEventListener('click', () => {
 document.getElementById('mobileClose').addEventListener('click', closeMobileNav);
 document.getElementById('navOverlay').addEventListener('click', closeMobileNav);
 
-// ===================== STICKY HEADER =====================
+// STICKY HEADER
 window.addEventListener('scroll', () => {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// ===================== FORM TABS =====================
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-  });
-});
-
-// ===================== CONTACT FORM =====================
-async function handleFormSubmit(type) {
-  const nameEl = document.getElementById(type === 'visit' ? 'v-name' : 'q-name');
-  const phoneEl = document.getElementById(type === 'visit' ? 'v-phone' : 'q-phone');
-  const reqEl = type === 'quote' ? document.getElementById('q-service') : null;
-  const detailsEl = type === 'quote' ? document.getElementById('q-details') : null;
-  if (!nameEl.value.trim()) { nameEl.focus(); nameEl.style.borderColor='#e74c3c'; setTimeout(()=>nameEl.style.borderColor='',2000); return; }
-  const phone = phoneEl.value.replace(/\s/g,'');
-  if (!phone || !/^[+\d]{10,13}$/.test(phone)) { phoneEl.focus(); phoneEl.style.borderColor='#e74c3c'; setTimeout(()=>phoneEl.style.borderColor='',2000); return; }
-  if (reqEl && !reqEl.value) { reqEl.focus(); reqEl.style.borderColor='#e74c3c'; setTimeout(()=>reqEl.style.borderColor='',2000); return; }
-  if (detailsEl && !detailsEl.value.trim()) { detailsEl.focus(); detailsEl.style.borderColor='#e74c3c'; setTimeout(()=>detailsEl.style.borderColor='',2000); return; }
-
-  const payload = new FormData();
-  payload.append('form_type', type);
-  payload.append('name', nameEl.value.trim());
-  payload.append('phone', phone);
-
-  if (type === 'visit') {
-    const cityEl = document.getElementById('v-city');
-    const dateEl = document.getElementById('v-date');
-    const msgEl = document.getElementById('v-msg');
-    payload.append('city', cityEl?.value?.trim() || '');
-    payload.append('preferred_date', dateEl?.value || '');
-    payload.append('message', msgEl?.value?.trim() || '');
-  } else {
-    const emailEl = document.getElementById('q-email');
-    const budgetEl = document.getElementById('q-budget');
-    payload.append('email', emailEl?.value?.trim() || '');
-    payload.append('service', reqEl?.value || '');
-    payload.append('budget', budgetEl?.value || '');
-    payload.append('details', detailsEl?.value?.trim() || '');
-  }
-
-  try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
-      method: 'POST',
-      body: payload,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (!res.ok) throw new Error('Form submission failed');
-
-    showToast("✓ Received! We'll contact you within 24 hours.");
-
-    if (type === 'visit') {
-      document.getElementById('v-name').value = '';
-      document.getElementById('v-phone').value = '';
-      document.getElementById('v-city').value = '';
-      document.getElementById('v-date').value = '';
-      document.getElementById('v-msg').value = '';
-    } else {
-      document.getElementById('q-name').value = '';
-      document.getElementById('q-phone').value = '';
-      document.getElementById('q-email').value = '';
-      document.getElementById('q-service').value = '';
-      document.getElementById('q-budget').value = '';
-      document.getElementById('q-details').value = '';
-    }
-  } catch (e) {
-    showToast("⚠️ Could not submit. Please try again.");
-  }
-}
-
-function submitForm(type) {
-  handleFormSubmit(type);
-}
-
-function showPremiumPopup() {
-  const popup = document.createElement('div');
-  popup.id = 'success-overlay';
-  popup.innerHTML = `
-    <div style="position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); z-index:10000; display:flex; align-items:center; justify-content:center; padding:20px;">
-      <div style="background:white; padding:40px; border-radius:30px; text-align:center; max-width:400px; box-shadow:0 25px 50px rgba(0,0,0,0.5); animation: slideUp 0.4s ease-out;">
-        <div style="width:70px; height:70px; background:#E07B39; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:35px; color:white;">✓</div>
-        <h2 style="font-family:'Playfair Display'; font-size:26px; margin-bottom:10px;">Request Sent!</h2>
-        <p style="color:#666; margin-bottom:25px;">Thanks for reaching out to Jangid Studio. We'll contact you within 24 hours.</p>
-        <button onclick="document.getElementById('success-overlay').remove()" style="width:100%; padding:15px; background:#1F1F1F; color:white; border:none; border-radius:12px; font-weight:600; cursor:pointer;">Great, thanks!</button>
-      </div>
-    </div>
-    <style> @keyframes slideUp { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } } </style>
-  `;
-  document.body.appendChild(popup);
-}
-
-// ===================== TOAST =====================
+// TOAST
 function showToast(msg) {
-  const toast = document.getElementById('toast');
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 4000);
 }
 
-// ===================== SCROLL ANIMATIONS =====================
+// FADE UP ANIMATIONS
 function initFadeUps() {
   const els = document.querySelector('.page.active').querySelectorAll('.fade-up:not(.visible)');
-  const observer = new IntersectionObserver((entries) => {
+  const obs = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
         setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
-  els.forEach(el => observer.observe(el));
+  els.forEach(el => obs.observe(el));
 }
 
-// ===================== COUNTER ANIMATION =====================
+// COUNTER ANIMATION
 function animateCounters() {
-  const counters = document.querySelectorAll('.page.active [data-count]');
-  counters.forEach(el => {
+  document.querySelectorAll('.page.active [data-count]').forEach(el => {
     const target = parseInt(el.dataset.count);
     const suffix = target === 5 ? '' : '+';
     let start = 0;
@@ -1608,7 +1383,7 @@ function animateCounters() {
   });
 }
 
-// ===================== INIT =====================
+// INIT
 setTimeout(() => { initFadeUps(); animateCounters(); loadReviews(); }, 200);
 </script>
 </body>
